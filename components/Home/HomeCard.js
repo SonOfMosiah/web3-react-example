@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Tilt from "react-parallax-tilt";
+import Image from "next/image";
 import {
   AiFillGithub,
   AiOutlineTwitter,
@@ -52,7 +53,7 @@ function HomeCard() {
           </Col>
           <Col md={4} className="myAvtar">
             <Tilt>
-              <img src={"/Assets/avatar.svg"} className="img-fluid" alt="avatar" />
+              <Image src={"/Assets/avatar.svg"} className="img-fluid" alt="avatar" layout="fill"/>
             </Tilt>
           </Col>
         </Row>

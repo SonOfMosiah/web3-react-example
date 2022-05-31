@@ -3,6 +3,7 @@
 import React, { useState } from 'react'
 import { connect } from 'react-redux'
 import { ethers } from 'ethers'
+import Image from "next/image"
 import toLower from 'lodash/toLower'
 import { useWeb3React } from '@web3-react/core'
 
@@ -59,7 +60,7 @@ function SelectWallet (props) {
                 }}
               >
                 <span>{name}</span>
-                <img src={`/icons/${toLower(name.replace(/ /g, ''))}.png`} className='img-fluid img-fluid-icon' style={{ width: '32px' }} />
+                <Image src={`/icons/${toLower(name.replace(/ /g, ''))}.png`} className='img-fluid img-fluid-icon' layout="fill" style={{ width: '32px' }} />
               </li>
             )
           })}

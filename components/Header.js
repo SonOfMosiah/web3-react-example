@@ -225,7 +225,7 @@ function Header(props) {
                   <a className='nav-link p-0 cursor-pointer text-size-sm' onClick={() => setDropdown({ [link.sys.id]: !dropdown[link.sys.id] })}>{link.fields.text}</a>
                   <div className={`dropdown-menu shadow-lg border-0 ${get(dropdown, [link.sys.id], '') === true ? 'show' : ''}`}>
                     {link.fields.link.map(linkInner =>
-                      <Link className='nav-link' href={linkInner.fields.url} as={linkInner.fields.url}>
+                      <Link key={linkInner.fields.text} className='nav-link' href={linkInner.fields.url} as={linkInner.fields.url}>
                         <a className='dropdown-item d-flex align-items-center justify-content-start text-size-sm pl-3' onClick={() => trackEvent(`Nav: ${linkInner.fields.text}`)}>{linkInner.fields.text}</a>
                       </Link>  
                     )}
