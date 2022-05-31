@@ -1,0 +1,35 @@
+footer {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 1rem 0;
+
+  @media (max-width: 767px) {
+    position: absolute;
+    background: none;
+  }
+
+  a,
+  p {
+    @include transition(250ms ease);
+    font-size: 0.9rem;
+    margin: 0;
+    color: $gray-600;
+    &:hover {
+      color: $white;
+    }
+  }
+}
+
+.light-mode {
+  footer {
+    a,
+    p {
+      color: $gray-200;
+      &:hover {
+        color: #ffffff;
+      }
+    }
+  }
+}
