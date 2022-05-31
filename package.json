@@ -4,9 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export",
-    "start": "next start",
-    "lint": "next lint"
+    "build": "next build",
+    "start": "NODE_ENV=production next start",
+    "lint": "next lint",
+    "export": "next export"
   },
   "dependencies": {
     "@uauth/web3-react": "^1.1.0",
